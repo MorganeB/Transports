@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<head>
+		<title>Bus</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			.infos{
+				width:70%;  
+				font-size:15px ; 
+				margin:20px 40px;
+				font-family:Arial;
+				display:block;
+				border:solid 1px;
+				padding:20px;
+				
+			}
+
+			#way{
+				margin-top:20px ; 
+				text-align:center;
+				}
+
+			.deleted{
+				text-decoration: line-through;
+			}
+
+			button{
+				width:25%;
+				background-color: #C6CCD2; 
+				border-color: #AAB3BB;
+				border-width: 0px 0px 2px;
+				cursor: pointer;
+				text-align: center;
+				display: inline-block;
+				font-size: 16px;
+				border-radius: 6px;
+				font-family: Arial;
+				color: #000000;
+				padding: 12px;
+				margin:0px 10px;
+			}
+
+			button:hover{
+				background-color: #B8BFC7;
+				border-color: #AAB3BB; 
+			}	
+			#pdf{
+				width:50%;  
+				font-size:18px ; 
+				margin:30px 80px;
+				font-family:Arial;
+				display:inline-block;
+				text-align:center;	
+			}
+			
+			.pdf{
+				font-family: Arial;
+				color: red;
+				font-weight:bold;
+			}
+			
+			.spacing{
+				line-height:12px ;
+				padding-right:20px;
+			}
+		</style>
+	</head>
+	<body>
+	<div id="way">
+		<button id="departThionville">THV</button>
+		<button id="departMetz">METZ</button>
+		<button id="fiches">Fiches</button>
+	</div>
+	<div id="Thionville">
+		<div class="infos">
+			300 Thionville > Kirchberg<br>
+			<span class="spacing">06:30</span>07:09<br>
+			<span class="spacing">06:45</span>07:58<br>
+			<span class="spacing">07:00</span>08:13<br>
+			<span class="spacing">07:30</span>08:43<br><br>
+			
+			303  Manom > Kirchberg<br>
+			<span class="spacing">06:45</span>08:00<br>
+			<span class="spacing">07:15</span>08:30<br>
+			<span class="spacing">07:45</span>09:00<br><br>
+			
+			323  Manom > Kirchberg<br>
+			<span class="spacing">06:58</span>07:55<br>
+			<span class="spacing">07:22</span>08:19<br>
+			<span class="spacing">07:46</span>08:43<br>
+			<span class="spacing">08:10</span>09:07<br><br>
+			
+			TER Thionville > Luxembourg <br>
+			<span class="spacing">06:27</span>06:52<br>
+			<span class="spacing">06:58</span>07:23<br>
+			<span class="spacing">07:03</span>07:32<br>
+			<span class="spacing">07:17</span>07:48<br>
+			<span class="spacing">07:27</span>07:58<br>
+			<span class="spacing">07:33</span>08:01<br><br><br><br>
+			
+			300 Kirchberg > Thionville<br>
+			<span class="spacing">16:26</span>17:26<br>
+			<span class="spacing">16:41</span>17:41<br>
+			<span class="spacing">17:11</span>18:11<br>
+			<span class="spacing">17:26</span>18:26<br>
+			<span class="spacing">17:41</span>18:41<br>
+			<span class="spacing">18:11</span>19:11<br><br>
+			
+			303  Kirchberg > Manom<br>
+			<span class="spacing">17:06</span>18:10<br>
+			<span class="spacing">17:36</span>18:40<br>
+			<span class="spacing">18:06</span>19:10<br><br>
+			
+			323  Kirchberg > Manom<br>
+			<span class="spacing">16:18</span>17:08<br>
+			<span class="spacing">17:06</span>18:04<br>
+			<span class="spacing">17:30</span>18:28<br>
+			<span class="spacing">17:54</span>18:52<br>
+			<span class="spacing">18:18</span>19:16<br><br>
+			
+			TER Luxembourg > Thionville<br>
+			<span class="spacing">16:38</span>17:02<br>
+			<span class="spacing">16:43</span>17:12<br>
+			<span class="spacing">16:57</span>17:25<br>
+			<span class="spacing">17:13</span>17:42<br>
+			<span class="spacing">17:38</span>18:02<br>
+			<span class="spacing">17:43</span>18:12<br>
+			<span class="spacing">17:57</span>18:25<br>
+			<span class="spacing">18:08</span>18:32<br>
+			<span class="spacing">18:13</span>18:42<br>
+			<span class="spacing">18:28</span>18:55
+		</div>
+	</div>
+	
+	<div id="Metz">
+		<div class="infos">
+			TER Metz > Luxembourg<br>
+			<span class="spacing">06:07</span>07:06<br>
+			<span class="spacing">06:33</span>07:23<br>
+			<span class="spacing">06:46</span>07:48<br>
+			<span class="spacing">07:03</span>07:53<br>
+			<span class="spacing">07:16</span>08:18<br>
+			<span class="spacing">07:33</span>08:23<br><br><br>
+			
+			TER Luxembourg > Metz<br>
+			<span class="spacing">16:38</span>17:27<br>
+			<span class="spacing">16:43</span>17:44<br>
+			<span class="spacing">16:57</span>17:59<br>
+			<span class="spacing">17:13</span>18:14<br>
+			<span class="spacing">17:38</span>18:27<br>
+			<span class="spacing">17:43</span>18:44<br>
+			<span class="spacing">17:57</span>18:59 (V)<br>
+			<span class="spacing">18:08</span>18:57 (L->J)<br>
+			<span class="spacing">18:13</span>19:14<br>
+			<span class="spacing">18:38</span>19:27
+		</div>
+	</div>
+	
+	<div id="pdf">
+		<p class="pdf"><a href="http://cdn.ter.sncf.com/medias/PDF/lorraine/FH-01-Metz-Luxembourg-du-11-decembre-2016-au-15-juillet-2017-v3_tcm62-73408_tcm62-71032.pdf">TER</a></p>
+		<p class="pdf"><a href="http://citeline.fr/assets/ligne/165/300.pdf">300</a></p>
+		<p class="pdf"><a href="http://citeline.fr/assets/ligne/167/Ligne303_2016_1.pdf">303</a></p>
+		<p class="pdf"><a href="http://citeline.fr/assets/ligne/155/FicheLigne323vdef.pdf">323</a></p>
+	</div>
+	
+	</body>
+	
+	<script>
+	$(document).ready(function(){
+		// hide all sections but buttons for departure city
+		$("#Thionville").hide();
+		$("#Metz").hide();
+		$("#pdf").hide();
+		
+		// show aller / retour for Thionville
+		$("#departThionville").click(function(){
+			$("#Thionville").show();
+			$("#Metz").hide();
+			$("#pdf").hide();
+		});
+		
+		// show aller / retour for Metz
+		$("#departMetz").click(function(){
+			$("#Thionville").hide();
+			$("#Metz").show();
+			$("#pdf").hide();
+		});
+		
+		// show pdf links
+		$("#fiches").click(function(){
+			$("#Thionville").hide();
+			$("#Metz").hide();
+			$("#pdf").show();
+		});
+	});
+	</script>
+
+
+</html>
